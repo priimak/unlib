@@ -1,0 +1,17 @@
+[project]
+name = "unlib"
+description = "Physical units library"
+readme = "README.md"
+dynamic = ["version"]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["setuptools", "wheel", "setuptools-git-versioning"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
