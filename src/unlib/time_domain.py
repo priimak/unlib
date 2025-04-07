@@ -106,6 +106,9 @@ class Duration:
         self.value = time_interval
         self.time_unit = time_unit
 
+    def __hash__(self):
+        return hash(self.value) + hash(self.time_unit)
+
     def __str__(self):
         return f"{self.value} {self.time_unit.to_str()}"
 
