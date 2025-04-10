@@ -89,7 +89,7 @@ class MetricValue:
                 phys_unit=match_result.group("phys_unit")
             )
         else:
-            raise RuntimeError(f"Unable to parse \"{s}\" as duration")
+            raise RuntimeError(f"Unable to parse \"{s}\" as metric value")
 
     def to_float(self, scale: str | Scale) -> float:
         return self.value * self.scale.value / Scale.value_of(scale).value
