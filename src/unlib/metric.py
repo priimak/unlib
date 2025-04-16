@@ -107,7 +107,7 @@ class MetricValue:
             if 1000 > abs(self.to_float(scale)) >= 1:
                 return self.in_unit(scale)
 
-        return self.in_unit(Scale.NANO)
+        return self.in_unit(Scale.UNIT)
 
     def __add__(self, other):
         if isinstance(other, MetricValue):
